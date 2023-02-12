@@ -1,5 +1,5 @@
 # Data
-dataset/
+data*
 
 # Virtual environment
 venv/

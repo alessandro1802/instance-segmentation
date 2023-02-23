@@ -12,6 +12,10 @@ import io
 
 from utils import *
 
+def normalize(input_image):
+    input_image = tf.cast(input_image, tf.float32) / 255.0
+    return input_image
+
 configureGPU()
 
 model = tf.keras.models.load_model('./models/model.h5')
@@ -44,6 +48,7 @@ def submit():
     # Get the prediction
     DATA_PATH = temp_dir.name
     ds = getDataset(DATA_PATH, BATCH_SIZE, IMAGE_HEIGHT, IMAGE_WIDTH, SEED)
+    ds = ds.map(normalize)
     
     fig = predict(model, ds)
     

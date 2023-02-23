@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Instance segmentation</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src= "https://code.jquery.com/ui/1.12.1/jquery-ui.js"> </script> 
+	</head>
+	<body>
+		<h1>Instance segmentation</h1>
+		<p>Upload your image below and click submit for predictions</p>
+		<form action="{{ url_for('submit') }}" enctype="multipart/form-data" method="POST">
+			<input name="img" type="file"/>
+			<input type="submit"/>
+		</form>
+		<img src="{{ image }}">
+	</body>
+</html>

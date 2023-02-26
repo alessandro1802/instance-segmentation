@@ -15,6 +15,7 @@ python app.py
 ```shell
 python3.8 -m venv venv
 source venv/bin/activate
+pip install git+https://github.com/tensorflow/examples.git
 pip install -r requirements.txt
 ```
 

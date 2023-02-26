@@ -4,6 +4,7 @@ data*
 # Virtual environment
 venv/
 
-# Development environments' files
+# Development environments files
 .ipynb_checkpoints/
 .obsidian/
+__pycache__

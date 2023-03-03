@@ -40,7 +40,8 @@ def submit():
     img_data = request.files['img']
     img_byte_string = img_data.read()
     img_array = np.frombuffer(img_byte_string, dtype = np.uint8)
-    arr = cv2.imdecode(img_array, cv2.IMREAD_COLOR)[:,:,::-1]
+    # arr = cv2.imdecode(img_array, cv2.IMREAD_COLOR)[:,:,::-1]
+    arr = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
     
     # Save it to a file
     cv2.imwrite(temp_dir.name + "/image.jpg", arr)

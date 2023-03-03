@@ -1,4 +1,7 @@
 # Instance segmentation via transfer learning 
+
+<img src="repo_images/rest.png"/>
+
 There are 3 notebooks:
 1. `sampleDataset` is how the dataset was sampled
 2. `train` where it is shown how the model was fine-tuned and trained
